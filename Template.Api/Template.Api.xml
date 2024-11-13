@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Template.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Template.Api.Controllers.ExternalServices.Files.FileController.UploadFileAsync(Template.Application.Common.Interfaces.Services.IStorage,Template.Application.Domains.ExternalServices.Storage.Commands.Upload.FileUploadCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por Subir arquivo no Azure Storage.
+            </summary>
+            <param name="storage"></param>
+            <param name="file"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.ExternalServices.Files.FileController.GetFileAsync(Template.Application.Common.Interfaces.Services.IStorage,Template.Application.Domains.ExternalServices.Storage.Queries.DownloadFile.DownloadFileQuery)">
+            <summary>
+            Responsável por baixar um arquivo no Azure Storage.
+            </summary>
+            <param name="storage"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.ExternalServices.Files.FileController.DeleteFileAsync(Template.Application.Common.Interfaces.Services.IStorage,Template.Application.Domains.ExternalServices.Storage.Commands.Delete.FileDeleteCommand)">
+            <summary>
+            Responsável por Deletar arquivo no Azure Storage.
+            </summary>
+            <param name="storage"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Auth.AuthController.LoginAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Auth.Commands.LoginUser.LoginUserCommand,Template.Application.ViewModels.Users.LoginUserVm},Template.Application.Domains.Identity.Auth.Commands.LoginUser.LoginUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por fazer login no sistema.
+            </summary>
+            <param name="handler"></param>
+            <param name="command"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.CreateUserAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Users.Commands.CreateUsers.CreateUserCommand,Template.Application.Common.Models.User},Template.Application.Domains.Identity.Users.Commands.CreateUsers.CreateUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por criar novos usuários no sistema.
+            </summary>
+            <param name="handler"></param>
+            <param name="command">Forneça as informações para criar o usuário.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.PolicesAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Users.Queries.GetPolices.GetPolicesQuery,System.Collections.Generic.IEnumerable{Template.Application.ViewModels.Shared.KeyValuePairVM}},System.Threading.CancellationToken)">
+            <summary>
+            Obtém a lista completa de políticas de acesso do sistema para exibição e configuração de permissões.
+            </summary>
+            <param name="handler">Handler que executa a consulta para obter as políticas.</param>
+            <param name="cancellationToken">Token de cancelamento para interromper a operação, se necessário.</param>
+            <returns>Retorna uma lista de objetos KeyValuePairVM, contendo as políticas de acesso.</returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.RolesAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Users.Queries.GetRoles.GetRolesQuery,System.Collections.Generic.IEnumerable{Template.Application.ViewModels.Shared.KeyValuePairVM}},System.Threading.CancellationToken)">
+            <summary>
+            Obtém a lista completa de funções disponíveis no sistema para definição de permissões e acesso.
+            </summary>
+            <param name="handler">Handler que executa a consulta para obter as roles.</param>
+            <param name="cancellationToken">Token de cancelamento para interromper a operação, se necessário.</param>
+            <returns>Retorna uma lista de objetos KeyValuePairVM, contendo as funções disponíveis no sistema.</returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.EditUserAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Users.Commands.EditUsers.EditUserCommand,Template.Application.Common.Models.User},Template.Application.Domains.Identity.Users.Commands.EditUsers.EditUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por editar usuário no sistema.
+            </summary>
+            <param name="handler"></param>
+            <param name="command">Forneça as informações para editar o usuário.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.UsuariosAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.Identity.Users.Queries.GetAll.GetAllQuery,System.Collections.Generic.IEnumerable{Template.Application.ViewModels.Users.UserVm}},Template.Application.Domains.Identity.Users.Queries.GetAll.GetAllQuery,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por listar usuários paginados, ordenados e filtrados por email, CPF ou nome.
+            </summary>
+            <param name="handler"></param>
+            <param name="query">O objeto de consulta contendo os parâmetros de paginação, ordenação e filtro.</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.Identity.Users.UsersController.DeleteUserAsync(Template.Application.Common.Behaviours.IHandlerBase{System.Guid,System.String},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por deletar usuário pelo Id.
+            </summary>
+            <param name="handler"></param>
+            <param name="userId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.InternalServices.Tenant.ClientController.CreateClientAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.InternalServices.Clients.Commands.CreateClient.CreateClientCommand,Template.Application.ViewModels.Clients.ClientVM},Template.Application.Domains.InternalServices.Clients.Commands.CreateClient.CreateClientCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por Registrar um novo cliente.
+            </summary>
+            <param name="handler"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.InternalServices.Tenant.ClientController.UpdateClientAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.InternalServices.Clients.Commands.UpdateClient.UpdateClientCommand,Template.Application.ViewModels.Clients.ClientVM},Template.Application.Domains.InternalServices.Clients.Commands.UpdateClient.UpdateClientCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por Editar um cliente.
+            </summary>
+            <param name="handler"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.InternalServices.Tenant.ClientController.GetAllAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.InternalServices.Clients.Queries.GetAll.GetAllQuery,System.Collections.Generic.IEnumerable{Template.Application.ViewModels.Clients.ClientVM}},Template.Application.Domains.InternalServices.Clients.Queries.GetAll.GetAllQuery,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por listar todos os clientes.
+            </summary>
+            <param name="handler"></param>
+            <param name="query"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.InternalServices.Tenant.ClientController.DeactivateClientAsync(Template.Application.Common.Behaviours.IHandlerBase{Template.Application.Domains.InternalServices.Clients.Commands.DeactivateClient.DeactivateClientCommand,System.String},Template.Application.Domains.InternalServices.Clients.Commands.DeactivateClient.DeactivateClientCommand,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por desativar um cliente.
+            </summary>
+            <param name="handler"></param>
+            <param name="command"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.InternalServices.Tenant.ClientController.DeleteClientAsync(Template.Application.Common.Behaviours.IHandlerBase{System.Guid,System.String},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Responsável por excluir um cliente fisicamente.
+            </summary>
+            <param name="handler"></param>
+            <param name="clientId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Template.Api.Controllers.System.HealthController.HealthCheck">
+            <summary>
+            Endpoint de verificação de integridade.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
